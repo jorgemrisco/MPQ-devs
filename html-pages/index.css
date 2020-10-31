@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 .social-icons {
     margin-top: 30px;
 }  
@@ -39,6 +43,7 @@ footer {
 
 .contact{
     background-color: black;
+    padding-top: 40px;
 }
 
 .container {
@@ -109,4 +114,40 @@ h1{
     text-align: center;
     font-family: 'Nunito', sans-serif;
     font-weight: 300;
+    font-size: 30px;
+}
+
+.container-team{
+    margin: 20px 40px;
+}
+
+.heading {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+}
+
+.heading span {
+    font-size: 20px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+    padding-bottom: 40px;
+}
+
+.profile {
+    flex-basis: 260px;
+}
+
+.profile .profile-img {
+    height: 260px;
+    width: 260px;
+    border-radius: 100%;
+}
+
+.members {
+    background-color: #f8f9fa;
+
 }
