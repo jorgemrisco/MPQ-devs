@@ -1,3 +1,6 @@
+@import "nav-menu.css";
+
+
 *{
     margin: 0;
     padding: 0;
@@ -151,3 +154,4 @@ h1{
     background-color: #f8f9fa;
 
 }
+
