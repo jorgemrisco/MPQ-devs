@@ -155,3 +155,90 @@ h1{
 
 }
 
+.quemsomos {
+    height: 500px;
+    background-color: #f8f9fa;
+}
+
+.container-quemsomos{
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+
+}
+
+.container-quemsomos-img {
+    width: 40%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.container-quemsomos-txt {
+    margin: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.quemsomos-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.quemsomos-txt {
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+
+.oquefazemos {
+    height: 500px;
+    background-color: #f8f9fa;
+}
+
+.container-oquefazemos{
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+
+}
+
+.container-oquefazemos-img {
+    width: 40%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.container-oquefazemos-txt {
+    margin: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.oquefazemos-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.oquefazemos-txt {
+    height: 100%;
+    width: 100%;
+    
+}
