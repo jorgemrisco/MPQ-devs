@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+html {
+    background-color: #f8f9fa;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
 }
@@ -179,6 +183,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+
     
 
 }
@@ -194,8 +199,7 @@ h1{
 
 .quemsomos-img {
     height: 100%;
-    width: 100%;
-    border-radius: 100%;
+    width: 80%;
 }
 
 .quemsomos-txt {
@@ -240,10 +244,10 @@ h1{
 
 .oquefazemos-img {
     height: 100%;
-    width: 100%;
-    border-radius: 100%;
+    width: 80%;
 }
 
 .oquefazemos-txt {
     height: 100%;
     width: 100%;
+}
