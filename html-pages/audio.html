@@ -26,6 +26,19 @@
             </section>
             <h1>Nome da pessoa</h1>
             <p>Transcrição</p>
+            <div id="transcriptWrapper">
+                <ul id="transcript">
+                    <li class="speaker1"><strong class="speakerName">Fulano de Tal</strong>:...</li>
+                    <li class="speaker2"><strong class="speakerName">Fulano de Tal</strong>: ...</li>
+                    <li class="speaker1"><strong class="speakerName">Fulano de Tal</strong>: ...</li>
+                    ...
+                </ul>
+            </div>
+            <audio id="audio" ontimeupdate="playTranscript()" controls>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </source>
+              </audio>
     
 </body>
 </html>
