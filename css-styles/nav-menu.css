@@ -2,22 +2,35 @@
 Para importar pra outra página CSS só usar @import nav-menu.css */
 
 #menu-bar{
+    
     padding: 16px;
     padding-left: 32px;
     padding-right: 32px;
     background-color: black;
     display: flex;
+    
+}
+
+#responsive-div{
+    display: flex;
+    width: 100%;
     justify-content: space-between;
 }
+@media only screen and (max-width: 600px) {
+    #responsive-div{
+        flex-direction: column;
+    }
+  }
 
 
 #menu-links{
-    
+    right: auto;
     display: flex;
     justify-content: space-around;
     align-self: center;    
 
 }
+
 
 .nav-button{
 
