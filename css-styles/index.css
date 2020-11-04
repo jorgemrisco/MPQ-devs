@@ -50,20 +50,24 @@ footer {
 }
 
 .contact{
+    display: flex;
+    flex-direction: column;
     width: 100%;
     background-color: black;
     padding-top: 40px;
+    margin-bottom: 32px;
 }
 
 .container {
     width: 50%;
-    margin: 0 auto;
+    align-self: center;
 }
   
 .form-contact {
+    margin-top: 32px;
     width: 100%;
     font-family: 'Nunito', sans-serif;
-    padding: 20px;
+
 }
   
 .form-contact-input {
@@ -98,14 +102,16 @@ footer {
     border-left: 1px solid #fff;
     text-indent: 20px;
     padding-top: 16px;
-    padding-left: 0;
-    padding-right: 0;
+
     font-family: 'Nunito', sans-serif;
+}
+
+#buttonContainer{
+    justify-content: center;
 }
   
 .form-contact-button {
-    width: 25%;
-    margin-left: 35%;
+    width: 200px;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
     border-radius: 4px;
@@ -116,6 +122,13 @@ footer {
     background: #ffffff;
     display: block;
     border: none;
+}
+.form-contact-button:hover {
+    background-color: black;
+    border: solid;
+    border-color: white;
+    border-width: thin;
+    color: white;
 }
 
 h1{
@@ -245,9 +258,15 @@ h1{
 #listOfMembers{
     padding: 32px;
 }
+#memberCard{
+    margin: 16px;
+}
 
 
 /*Responsividade*/
+
+
+/*Mobile*/
 @media only screen and (max-width: 600px) {
     #quem-somos{
         flex-direction: column;
@@ -260,17 +279,22 @@ h1{
     #listOfMembers{
         flex-direction: column;
     }
+    .container{
+        width: 90%;
+    }
+
 }
 
+/*half-screen-ish*/
 @media only screen and (max-width: 1100px) {
     #oq-fazemos{
-        padding-left: 0px;
+        padding-left: 32px;
         padding-right: 0px;
     }
 
     #quem-somos{
         padding-left: 0px;
-        padding-right: 0px;
+        padding-right: 32px;
     }
 
     #oqFazemosText{
@@ -283,4 +307,5 @@ h1{
         text-size-adjust: auto;
     }
     
+
   }
