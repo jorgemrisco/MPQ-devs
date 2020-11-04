@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museu pra quem?</title>
-    <link rel="stylesheet" href="../css-styles/index.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css-styles/index.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&display=swap"
         rel="stylesheet">
@@ -18,7 +18,7 @@
     <div id="responsive-div">
         <div id="menu-logo">
             <a href="">
-                <img src="../assets/images/logo/MPQ-logo-white.png" alt="MPQ-logo-white" height="60px">
+                <img src="{{ site.baseurl }}/assets/images/logo/MPQ-logo-white.png" alt="MPQ-logo-white" height="60px">
             </a>
 </div>
 
@@ -31,14 +31,14 @@
 </section>
 
 <div class = "banner">
-    <img src="/assets/images/capa.png" alt="Colagem Museu Pra Quem", width="100%">
+    <img src="{{ site.baseurl }}/assets/images/capa.png" alt="Colagem Museu Pra Quem", width="100%">
 </div>
   
 <section id="mainBody" class="flex-column">
     <h1 class="heading">Quem Somos?</h1>
     <section id="quem-somos" class="flex-row">
         <div class = "imageContainer" id="fotoEquipe"> 
-            <img src="../assets/images/img-1.JPG" alt="Foto Equipe MPQ" class="img" width="500px">
+            <img src="{{ site.baseurl }}/assets/images/img-1.JPG" alt="Foto Equipe MPQ" class="img" width="500px">
         </div>
         <div class = "flex-column" id="quemSomosText">
         <h2>"Somos o loren ipsum i. Sed odio earum hic doloribus."</h2>
@@ -62,7 +62,7 @@
         </div>
 
         <div class = "imageContainer" id="placa-mpq"> 
-            <img src="../assets/images/img-10.JPG" alt="Foto placa escrito Museu Para Quem?" class="img" width="500px">
+            <img src="{{ site.baseurl }}/assets/images/img-10.JPG" alt="Foto placa escrito Museu Para Quem?" class="img" width="500px">
         </div>
         
     </section>
@@ -74,7 +74,7 @@
             <h1 class="heading">Nossa equipe</h1>
             <div class="flex-row" id="listOfMembers">
                 <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img"  width="150px">
+                    <img src="{{ site.baseurl }}/assets/images/generic.jpg" class="profile-img"  width="150px">
 
                     <h3 class="user-name">Fulano de tal</h3>
                     <h5>Diretor do projeto</h5>
@@ -83,7 +83,7 @@
                         repellendus nisi?</p>
                 </div>
                 <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img" width="150px">
+                    <img src="{{ site.baseurl }}/assets/images/generic.jpg" class="profile-img" width="150px">
                     
                     <h3 class="user-name">Fulano de tal</h3>
                     <h5>Diretor do projeto</h5>
@@ -92,7 +92,7 @@
                         repellendus nisi?</p>
                 </div>
                 <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img" width="150px">
+                    <img src="{{ site.baseurl }}/assets/images/generic.jpg" class="profile-img" width="150px">
                     
                     <h3 class="user-name">Fulano de tal</h3>
                     <h5>Diretor do projeto</h5>
@@ -131,12 +131,12 @@
     </section>
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/museupraquem/"><img src='assets/icons-social/facebook (1).svg' /></a>
+            <a href="https://www.facebook.com/museupraquem/"><img src='{{ site.baseurl }}/assets/icons-social/facebook (1).svg' /></a>
             <!-- 
             <a href="http://www.twitter.com"><img src='/assets/icons-social/twitter (1).svg' /></a>
             <a href="http://www.linkedin.com"><img src='/assets/icons-social/linkedin (1).svg' /></a> 
             !-->
-            <a href="https://instagram.com/museupraquem?igshid=wa0gzfkea5sk"> <img src="assets/icons-social/instagram.png" /> </a>
+            <a href="https://instagram.com/museupraquem?igshid=wa0gzfkea5sk"> <img src="{{ site.baseurl }}/assets/icons-social/instagram.png" /> </a>
         </div>
         <p class="copy">&copy; Copyright 2020. Museu pra quem?</p>
     </footer>
