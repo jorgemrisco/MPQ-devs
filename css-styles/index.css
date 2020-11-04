@@ -32,7 +32,8 @@ body {
   .social-icons img {
     width:40px;
     height:40px;
-    margin-right: 20px;
+    align-self: center;
+    align-content: center;
 }
 
 footer {
@@ -49,19 +50,24 @@ footer {
 }
 
 .contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: black;
     padding-top: 40px;
+    margin-bottom: 32px;
 }
 
 .container {
     width: 50%;
-    margin: 0 auto;
+    align-self: center;
 }
   
 .form-contact {
+    margin-top: 32px;
     width: 100%;
     font-family: 'Nunito', sans-serif;
-    padding: 20px;
+
 }
   
 .form-contact-input {
@@ -96,14 +102,16 @@ footer {
     border-left: 1px solid #fff;
     text-indent: 20px;
     padding-top: 16px;
-    padding-left: 0;
-    padding-right: 0;
+
     font-family: 'Nunito', sans-serif;
+}
+
+#buttonContainer{
+    justify-content: center;
 }
   
 .form-contact-button {
-    width: 25%;
-    margin-left: 35%;
+    width: 200px;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
     border-radius: 4px;
@@ -115,6 +123,13 @@ footer {
     display: block;
     border: none;
 }
+.form-contact-button:hover {
+    background-color: black;
+    border: solid;
+    border-color: white;
+    border-width: thin;
+    color: white;
+}
 
 h1{
     color: white;
@@ -125,7 +140,9 @@ h1{
 }
 
 .container-team{
-    margin: 20px 40px;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .heading {
@@ -138,23 +155,35 @@ h1{
 }
 
 .profiles {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 20px 80px;
+    
     padding-bottom: 40px;
 }
 
 .profile {
+    width: 100%;
     flex-basis: 260px;
 }
 
-.profile .profile-img {
+.profile {
     height: 260px;
     width: 260px;
     border-radius: 100%;
 }
 
+.profile-img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    padding: 16px;
+    align-self: center;
+}
+
 .members {
+    margin: 32px;
     background-color: #f8f9fa;
 
 }
@@ -164,94 +193,119 @@ h1{
     font-size: 16px;
 }
 
-.quemsomos {
-    height: 500px;
-    background-color: #f8f9fa;
-    margin: 20px 0px;
-}
-
-.container-quemsomos{
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-
-}
-
-.container-quemsomos-img {
-    width: 40%;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    
-
-}
-
-.container-quemsomos-txt {
-    margin: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-.quemsomos-img {
-    height: 100%;
-    width: 80%;
-}
-
-.quemsomos-txt {
-    height: 100%;
-    width: 100%;
-    
-}
-
-
-
-.oquefazemos {
-    height: 500px;
-    background-color: #f8f9fa;
-    margin: 20px 0px;
-}
-
-.container-oquefazemos{
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-
-}
-
-.container-oquefazemos-img {
-    width: 40%;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-}
-
-.container-oquefazemos-txt {
-    margin: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-.oquefazemos-img {
-    height: 100%;
-    width: 80%;
-}
-
-.oquefazemos-txt {
-    height: 100%;
-    width: 100%;
-}
 
 .banner{
     width: 100%;
     }
+
+.flex-column{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+#mainBody{
+    height: 100%;
+}
+
+.imageContainer{
+    align-content: center;
+    align-self: center;
+    margin: 32px;
+    height: 100%;
+    width: 100%;
+}
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+#quem-somos{
+    justify-content: space-between;
+    padding: 64px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+#oq-fazemos{
+    justify-content: space-between;
+    padding: 64px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+#quemSomosText{
+    margin: 32px;
+    
+    width: 100%;
+}
+
+#oqFazemosText{
+    margin: 32px;
+    
+    width: 100%; 
+}
+
+#listOfMembers{
+    padding: 32px;
+}
+#memberCard{
+    margin: 16px;
+}
+
+
+/*Responsividade*/
+
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+    #quem-somos{
+        flex-direction: column;
+    }
+
+    #oq-fazemos{
+        flex-direction: column;
+        }
+
+    #listOfMembers{
+        flex-direction: column;
+    }
+    .container{
+        width: 90%;
+    }
+
+}
+
+/*half-screen-ish*/
+@media only screen and (max-width: 1100px) {
+    #oq-fazemos{
+        padding-left: 32px;
+        padding-right: 0px;
+    }
+
+    #quem-somos{
+        padding-left: 0px;
+        padding-right: 32px;
+    }
+
+    #oqFazemosText{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #quemSomosText{
+        margin-right: 0px;
+        margin-left: 0px;
+        text-size-adjust: auto;
+    }
+    
+
+  }

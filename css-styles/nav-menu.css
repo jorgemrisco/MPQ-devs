@@ -1,23 +1,33 @@
 /* Estilos referentes à barra de navegação superior.
 Para importar pra outra página CSS só usar @import nav-menu.css */
 
+
+
 #menu-bar{
+    
     padding: 16px;
     padding-left: 32px;
     padding-right: 32px;
     background-color: black;
     display: flex;
+    
+}
+
+#responsive-div{
+    display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 
 
 #menu-links{
-    
+    right: auto;
     display: flex;
     justify-content: space-around;
     align-self: center;    
 
 }
+
 
 .nav-button{
 
@@ -25,8 +35,11 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
     color: white;
     text-decoration: none;
     font-size: 18px;
+    text-align: center;
    
 }
+
+
 .nav-button:hover{
     opacity: 50%;
     text-decoration: underline;
@@ -35,4 +48,16 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
 
 #menu-logo:hover{
     opacity: 50%;
+}
+
+/*Responsividade*/
+
+@media only screen and (max-width: 600px) {
+    #menu-logo{
+        align-self: center;
+    }
+
+    #responsive-div{
+        flex-direction: column;
+    }
 }
