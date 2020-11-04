@@ -190,6 +190,7 @@ h1{
     align-self: center;
     margin: 32px;
     height: 100%;
+    width: 100%;
 }
 
 .img{
@@ -211,6 +212,12 @@ h1{
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    #quem-somos{
+        flex-direction: column;
+    }
+  }
+
 
 #oq-fazemos{
     justify-content: space-between;
@@ -225,7 +232,20 @@ h1{
     }
   }
 
+@media only screen and (max-width: 600px) {
+    #oq-fazemos{
+    flex-direction: column;
+    }
+}
+
 #quemSomosText{
     margin: 32px;
-    width: 600px;
+    
+    width: 100%;
+}
+
+#oqFazemosText{
+    margin: 32px;
+    margin-right: 400px;
+    width: 100%; 
 }
