@@ -18,11 +18,6 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
     width: 100%;
     justify-content: space-between;
 }
-@media only screen and (max-width: 600px) {
-    #responsive-div{
-        flex-direction: column;
-    }
-  }
 
 
 #menu-links{
@@ -54,8 +49,15 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
 #menu-logo:hover{
     opacity: 50%;
 }
+
+/*Responsividade*/
+
 @media only screen and (max-width: 600px) {
     #menu-logo{
         align-self: center;
     }
-  }
+
+    #responsive-div{
+        flex-direction: column;
+    }
+}

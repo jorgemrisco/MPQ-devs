@@ -32,7 +32,8 @@ body {
   .social-icons img {
     width:40px;
     height:40px;
-    margin-right: 20px;
+    align-self: center;
+    align-content: center;
 }
 
 footer {
@@ -49,6 +50,7 @@ footer {
 }
 
 .contact{
+    width: 100%;
     background-color: black;
     padding-top: 40px;
 }
@@ -125,7 +127,9 @@ h1{
 }
 
 .container-team{
-    margin: 20px 40px;
+    height: 100%;
+    width: 100%;
+    
 }
 
 .heading {
@@ -138,23 +142,35 @@ h1{
 }
 
 .profiles {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    margin: 20px 80px;
+    
     padding-bottom: 40px;
 }
 
 .profile {
+    width: 100%;
     flex-basis: 260px;
 }
 
-.profile .profile-img {
+.profile {
     height: 260px;
     width: 260px;
     border-radius: 100%;
 }
 
+.profile-img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    padding: 16px;
+    align-self: center;
+}
+
 .members {
+    margin: 32px;
     background-color: #f8f9fa;
 
 }
@@ -205,19 +221,6 @@ h1{
     padding-right: 200px;
 }
 
-@media only screen and (max-width: 1100px) {
-    #quem-somos{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    #quem-somos{
-        flex-direction: column;
-    }
-  }
-
 
 #oq-fazemos{
     justify-content: space-between;
@@ -225,18 +228,7 @@ h1{
     padding-left: 200px;
     padding-right: 200px;
 }
-@media only screen and (max-width: 1100px) {
-    #oq-fazemos{
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-  }
 
-@media only screen and (max-width: 600px) {
-    #oq-fazemos{
-    flex-direction: column;
-    }
-}
 
 #quemSomosText{
     margin: 32px;
@@ -246,6 +238,49 @@ h1{
 
 #oqFazemosText{
     margin: 32px;
-    margin-right: 400px;
+    
     width: 100%; 
 }
+
+#listOfMembers{
+    padding: 32px;
+}
+
+
+/*Responsividade*/
+@media only screen and (max-width: 600px) {
+    #quem-somos{
+        flex-direction: column;
+    }
+
+    #oq-fazemos{
+        flex-direction: column;
+        }
+
+    #listOfMembers{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #oq-fazemos{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #quem-somos{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #oqFazemosText{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #quemSomosText{
+        margin-right: 0px;
+        margin-left: 0px;
+        text-size-adjust: auto;
+    }
+    
+  }
