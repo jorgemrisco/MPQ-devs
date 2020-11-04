@@ -164,94 +164,68 @@ h1{
     font-size: 16px;
 }
 
-.quemsomos {
-    height: 500px;
-    background-color: #f8f9fa;
-    margin: 20px 0px;
-}
-
-.container-quemsomos{
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-
-}
-
-.container-quemsomos-img {
-    width: 40%;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    
-
-}
-
-.container-quemsomos-txt {
-    margin: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-.quemsomos-img {
-    height: 100%;
-    width: 80%;
-}
-
-.quemsomos-txt {
-    height: 100%;
-    width: 100%;
-    
-}
-
-
-
-.oquefazemos {
-    height: 500px;
-    background-color: #f8f9fa;
-    margin: 20px 0px;
-}
-
-.container-oquefazemos{
-    display: flex;
-    justify-content: space-around;
-    height: 80%;
-
-}
-
-.container-oquefazemos-img {
-    width: 40%;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-}
-
-.container-oquefazemos-txt {
-    margin: 20px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-
-.oquefazemos-img {
-    height: 100%;
-    width: 80%;
-}
-
-.oquefazemos-txt {
-    height: 100%;
-    width: 100%;
-}
 
 .banner{
     width: 100%;
     }
+
+.flex-column{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+#mainBody{
+    height: 100%;
+}
+
+.imageContainer{
+    align-content: center;
+    align-self: center;
+    margin: 32px;
+    height: 100%;
+}
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+#quem-somos{
+    justify-content: space-between;
+    padding: 64px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@media only screen and (max-width: 1100px) {
+    #quem-somos{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+  }
+
+
+#oq-fazemos{
+    justify-content: space-between;
+    padding: 64px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+@media only screen and (max-width: 1100px) {
+    #oq-fazemos{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+  }
+
+#quemSomosText{
+    margin: 32px;
+    width: 600px;
+}
