@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>videosTest</title>
+    <link rel="stylesheet" href="../css-styles/videos.css">
 </head>
 <body>
-    
+   <div class="container">
+       <header>
+           <img src="https://github.com/Middi/youtube-api/blob/master/images/logo.png" alt="" class="logo">
+            <h1>Teste do Header</h1>
+       </header>
+       <section id="video">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/9sWEecNUW-o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+       </section>
+       <main id="main">
+           
+
+             <script>
+                 var apiKey = "AIzaSyDTnMgyuZBewl3PDOxGn4df8KLY764LkIQ";
+                 var playlistId = "PLGgUY89Rg0HxK-pbEjuB5fpv8f1gyZcgm";
+                 var url = "https://www.googleapis.com/youtube/v3/playlistItems";
+                 var urlTeste = "https://www.googleapis.com/youtube/v3/playlistItems/?key=AIzaSyDTnMgyuZBewl3PDOxGn4df8KLY764LkIQ&maxResults=20&part=snippet&playlistId=PLHNLKeG6BVcrtPP0PsDabY4WFVVX6XBbV";
+
+                 var myInit = {
+                     part : "snippet",
+                     key : apiKey,
+                     maxResults : 10,
+                     playlistId : playlistId
+                 };
+                 loadVideos();
+
+                 async function loadVideos(){
+                     try{
+                         let response = await fetch(urlTeste);
+                         let dataJSON = await response.json();
+                         //console.log(dataJSON);
+                         var id = dataJSON.items[3].snippet.resourceId.videoId;
+                         mainVid(id);
+                         subVideosLoop(dataJSON);
+                     } catch(error) {
+                         console.log("error", error);
+                     }
+                 }
+
+                 function mainVid(id){
+                     var novoVideo = document.getElementById("video")
+                     novoVideo.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                     //console.log(novoVideo.innerHTML);
+
+                 }
+
+                 function subVideosLoop(dataJSON){
+
+                    var i;
+                    for (i=0; i < dataJSON.items.length; i++){
+                        var thumbnail = dataJSON.items[i].snippet.thumbnails.medium.url;
+                        var title = dataJSON.items[i].snippet.title;
+                        var descript = dataJSON.items[i].snippet.description.substring(0, 100);
+                        var novoSubVideo = document.getElementById("main");
+                        var vId = dataJSON.items[i].snippet.resourceId.videoId;
+
+                        novoSubVideo.innerHTML += (
+                        '<article class="item" id="'+i+'" data-key='+vId+'>'+
+                            '<img src="'+ thumbnail +'" alt="" class="thumb">' +
+                            '<div class="details">'+
+                                '<h4>'+title+'</h4>'+
+                                '<p>'+descript+'</p>'+
+                            
+                            '</div>'+
+                        '</article>');
+
+                    }
+
+                    var subVideos = document.getElementsByClassName("item");
+
+                    var clickReply = function() {
+                        var vidId = this.getAttribute("data-key");
+                        mainVid(vidId);
+                        //alert(vidId);
+                    };
+
+                    for (var i = 0; i < subVideos.length; i++) {
+                        subVideos[i].addEventListener('click', clickReply, false);
+                    }
+                     
+
+                     //console.log(novoSubVideo.innerHTML);
+                 }
+
+             </script>
+
+       </main>
+   </div> 
 </body>
 </html>
