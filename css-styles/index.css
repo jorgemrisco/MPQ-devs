@@ -109,7 +109,6 @@ footer {
 #buttonContainer{
     justify-content: center;
 }
-  
 .form-contact-button {
     width: 200px;
     font-size: 18px;
@@ -261,6 +260,14 @@ h1{
 #memberCard{
     margin: 16px;
 }
+
+
+.hidden{
+    background-color: lawngreen;
+    height: 200px;
+    position: fixed;
+}
+
 
 
 /*Responsividade*/
