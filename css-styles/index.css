@@ -262,6 +262,14 @@ h1{
 }
 
 
+.hidden{
+    background-color: lawngreen;
+    height: 200px;
+    position: fixed;
+}
+
+
+
 /*Responsividade*/
 
 
