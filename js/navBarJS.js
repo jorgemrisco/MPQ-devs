@@ -14,7 +14,7 @@ function myFunction() {
   if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky");
     navbar.style.background="black";
-    logo.src = "../assets/images/logo/MPQ-logo-white.png";
+    logo.src = "assets/images/logo/MPQ-logo-white.png";
     for(var i=0; i<text.length; i++) { 
         text[i].style.color="white";
       }
@@ -23,7 +23,7 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
     navbar.style.background="white";
-    logo.src = "../assets/images/logo/MPQ-logo-black.png";
+    logo.src = "assets/images/logo/MPQ-logo-black.png";
     for(var i=0; i<text.length; i++) { 
         text[i].style.color="black";
       }
