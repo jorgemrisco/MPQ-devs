@@ -283,15 +283,16 @@ h1{
 }
 
 /*Slider membros*/
-.equipe {
+  .equipe {
   display: grid;
   height: 100%;
   place-items: center;
   text-align: center;
   background: #f2f2f2;
-}
+  }
+
   .slider{
-    max-width: 1450px;
+    max-width: 1100px;
     display: flex;
     margin-left: 100px;
   }
@@ -303,7 +304,7 @@ h1{
   }
   
   .slider .card .img{
-    height: 400px;
+    height: 300px;
     width: 100%;
   }
   
