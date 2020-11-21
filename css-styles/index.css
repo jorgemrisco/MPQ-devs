@@ -276,19 +276,64 @@ h1{
 
 }
 
-#listOfMembers{
-    padding: 32px;
-}
-#memberCard{
-    margin: 16px;
-}
-
-
 .hidden{
     background-color: lawngreen;
     height: 200px;
     position: fixed;
 }
+
+/*Slider membros*/
+.equipe {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: #f2f2f2;
+}
+  .slider{
+    max-width: 1450px;
+    display: flex;
+    margin-left: 100px;
+  }
+  
+  .slider .card{
+    flex: 1;
+    margin: 0 10px;
+    background: #fff;
+  }
+  
+  .slider .card .img{
+    height: 400px;
+    width: 100%;
+  }
+  
+  .slider .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .slider .card .content{
+    padding: 10px 20px;
+  }
+  
+  .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .card .content .sub-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 20px;
+  }
+  
+  .card .content p{
+    text-align: justify;
+    margin: 10px 0;
+  }
+/*Fim do Slider  
 
 
 
