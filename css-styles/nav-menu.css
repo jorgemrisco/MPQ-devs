@@ -11,6 +11,7 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
     padding-right: 32px;
     display: flex;
     background:white;
+    z-index: 2;
     
 }
 

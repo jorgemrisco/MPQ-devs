@@ -33,6 +33,10 @@ body{
     margin: 0 auto;
 }
 
+.content {
+    width: 100%;
+}
+
 header, section {
     text-align: center;
     background-color: #ffffff;
@@ -50,6 +54,7 @@ main{
 article{
     display: flex;
     align-items: center;
+    flex-direction: column;
     padding: 8px 12px;
     border: 2px solid #ffffff;
     border-radius: 8px;
@@ -57,7 +62,7 @@ article{
 }
 
 article:hover{
-    border: 2px solid #ff9999;
+    border: 2px solid #000000;
 }
 
 .thumb{
@@ -65,14 +70,28 @@ article:hover{
     border-radius: 4px;
 }
 
+.titulo-thumb{
+    display: flex;
+    flex-direction: row;
+}
+
+
 /*Necessario para o collapsible*/
 .details{ 
+    position: relative;
+    z-index: 0;
+
+
     padding: 20px 20px;
     transition: ease .3s all;
     animation-name: fadeIn;
     animation-duration: .6s;
     animation-fill-mode: both;
     will-change: transform;
+}
+
+.js-video{
+    flex-direction: column;
 }
 
 /*Necessario para o collapsible*/
