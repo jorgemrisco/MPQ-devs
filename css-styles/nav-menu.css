@@ -61,6 +61,10 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
     #responsive-div{
         flex-direction: column;
     }
+
+    .nav-button{
+        font-size:12px;
+    }
 }
 
 .sticky {
