@@ -19,30 +19,13 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css-styles/styles-bootstrap.css" rel="stylesheet" />
+        <script src="components/navBar.js"></script>
         
 </head>
 
 <body>
+    <nav-bar></nav-bar>
 
-<section id = "menu-bar" style="z-index: 1000;">
-        
-    <div id="responsive-div">
-        <div id="menu-logo">
-            <a href="index.html">
-                <img id="logo-reference" src="assets/images/logo/MPQ-logo-black.png" alt="MPQ-logo-black" height="60px">
-            </a>
-</div>
-
-    <div id="menu-links">
-        <a class="nav-button" href="#quemsomostopo">Quem Somos?</a>
-        <a class="nav-button" href="#listOfMembers">Nossa Equipe</a>
-        <a class="nav-button" href="acervocarcerefem.html">Acervo</a>
-        <a class="nav-button" href="mpqrecomenda.html">MPQ Recomenda</a>
-        <a class="nav-button" href="#faleConosco">Fale Conosco</a>
-        
-    </div>
-</div>
-</section>
 
 <div class = "banner">
     <img src="assets/images/capa.png" alt="Colagem Museu Pra Quem", width="100%">
@@ -76,7 +59,7 @@
 </section>
 
     <!-- About-->
-    <section class="page-section" id="about">
+    <section class="page-section" id="about" >
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading" style="font-family: 'Nunito', sans-serif; color: black;">Nossa história</h2>
@@ -84,7 +67,7 @@
             </div>
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/img-9.JPG" alt="sistema-carcerário" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/linhaDoTempo1.png" alt="sistema-carcerário" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>2017</h4>
@@ -94,7 +77,7 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/img-11.JPG" alt="sistema-carcerário-feminino" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/linhaDoTempo2.png" alt="sistema-carcerário-feminino" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>2018</h4>
@@ -104,7 +87,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/linhaDoTempo3.png" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 style="font-family: 'Nunito', sans-serif;">2019</h4>
@@ -114,7 +97,7 @@
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="" /></div>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/images/carcere_fem/linhaDoTempo4.png" alt="" /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4>2020</h4>
@@ -135,6 +118,20 @@
                     </div>
                 </li>
             </ul>
+        </div>
+    </section>
+
+
+    <section id = "enactus">
+        <h1 class = "heading">Quem criou o MPQ?</h1>
+        <div  id="enactus-container">
+            <div id="enactus-text" class="flex-column">
+                <p id = "enactus-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <div id="enactus-photo" class = "flex-column">
+                <img src="assets/images/logo/enactus.png"  alt="logo-enactus" class="img">
+            </div>
+            <div class="flex-column"></div>
         </div>
     </section>
 
@@ -220,8 +217,7 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts-bootstrap.js"></script>
-
-    <script src="js/navBarJS.js"> </script>
+    <script src="js/navBarDynamic.js"></script>
 </body>
 
 </html>
