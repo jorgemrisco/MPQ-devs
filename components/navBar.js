@@ -12,7 +12,7 @@ customElements.define('nav-bar', class extends HTMLElement {
       <div id="menu-links">
           <a class="nav-button" href="index.html#quem-somos">Quem Somos?</a>
           <a class="nav-button" href="index.html#listOfMembers">Nossa Equipe</a>
-          <a class="nav-button" href="acervocarcerefem.html">Acervo</a>
+          <a class="nav-button" href="acervo.html">Acervo</a>
           <a class="nav-button" href="mpqrecomenda.html">MPQ Recomenda</a>
           <a class="nav-button" href="index.html#faleConosco">Fale Conosco</a>
           
