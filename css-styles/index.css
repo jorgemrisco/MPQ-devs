@@ -59,6 +59,10 @@ footer {
     margin-bottom: 32px;
 }
 
+.contact h1 {
+    padding-top: 60px;
+}
+
 .container {
     width: 50%;
     align-self: center;
@@ -148,6 +152,7 @@ h1{
 .heading {
     font-family: 'Nunito', sans-serif;
     color: black;
+    padding: 40px 0px;
 }
 
 .heading span {
