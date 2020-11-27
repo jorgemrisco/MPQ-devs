@@ -41,51 +41,63 @@
     
    <div class="container">
        <header>
-           <img src="https://github.com/Middi/youtube-api/blob/master/images/logo.png" alt="" class="logo">
             <h1>Playlist de Vídeos</h1>
        </header>
-       <section id="video">
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/9sWEecNUW-o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-       </section>
+       
        <main id="main">
+           
+            <!--<div class="content">--><!--Video padrão antes de processar a API-->
+                <!--<section id="videoMain"> 
+                    <iframe width=80% height="315" src="https://www.youtube.com/embed/9sWEecNUW-o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>-->
            
 
              <script>
-                 var apiKey = "AIzaSyDTnMgyuZBewl3PDOxGn4df8KLY764LkIQ";
-                 var playlistId = "PLGgUY89Rg0HxK-pbEjuB5fpv8f1gyZcgm";
+                 var apiKey = "AIzaSyDcOMLj0YjBJYjg_RwrTw2jWgeSeJhMH1g"; //inserido apos o key=
+                 var playlistId = "PLGgUY89Rg0HxK-pbEjuB5fpv8f1gyZcgm"; //pode e deve ser alterado conforme necessidade
                  var url = "https://www.googleapis.com/youtube/v3/playlistItems";
-                 var urlTeste = "https://www.googleapis.com/youtube/v3/playlistItems/?key=AIzaSyDTnMgyuZBewl3PDOxGn4df8KLY764LkIQ&maxResults=20&part=snippet&playlistId=PLHNLKeG6BVcrtPP0PsDabY4WFVVX6XBbV";
+                 var urlTeste = "https://www.googleapis.com/youtube/v3/playlistItems/?key=AIzaSyDcOMLj0YjBJYjg_RwrTw2jWgeSeJhMH1g&maxResults=4&part=snippet&playlistId=PLHNLKeG6BVcrtPP0PsDabY4WFVVX6XBbV";
 
+                /* Só funciona usando jQuery, não sei utilizar pelo requerimento de js vanilla
                  var myInit = {
                      part : "snippet",
                      key : apiKey,
                      maxResults : 10,
                      playlistId : playlistId
                  };
+                 */
+
+                 function addClass(el, klass) {
+                    el.classList.add(klass);
+                 }
+
+                 function removeClass(el, klass) {
+                    el.classList.remove(klass);
+                 }
+                 
                  loadVideos();
 
-                 async function loadVideos(){
+                 async function loadVideos(){ /* comunicação com a API utilizando método await para o fetch*/
                      try{
                          let response = await fetch(urlTeste);
                          let dataJSON = await response.json();
                          //console.log(dataJSON);
                          var id = dataJSON.items[3].snippet.resourceId.videoId;
-                         mainVid(id);
+                         //mainVid(id);
                          subVideosLoop(dataJSON);
                      } catch(error) {
                          console.log("error", error);
                      }
                  }
 
-                 function mainVid(id){
-                     var novoVideo = document.getElementById("video")
-                     novoVideo.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + id +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                 function mainVid(id){ /* gera e atualiza o vídeo principal, futuramente será excluído, funciona mais como um debugger */
+                     var novoVideo = document.getElementById("videoMain")
+                     novoVideo.innerHTML = '<iframe width=100% height="315" src="https://www.youtube.com/embed/' + id +'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
                      //console.log(novoVideo.innerHTML);
-
                  }
 
-                 function subVideosLoop(dataJSON){
+                 function subVideosLoop(dataJSON){ //loop principal
 
                     var i;
                     for (i=0; i < dataJSON.items.length; i++){
@@ -97,9 +109,14 @@
 
                         novoSubVideo.innerHTML += (
                         '<article class="item" id="'+i+'" data-key='+vId+'>'+
-                            '<img src="'+ thumbnail +'" alt="" class="thumb">' +
-                            '<div class="details">'+
+                            '<div class="titulo-thumb">'+
+                                '<img src="'+ thumbnail +'" alt="" class="thumb">' +
                                 '<h4>'+title+'</h4>'+
+                            '</div>'+
+                            '<div class="details hidden">'+
+                                '<section class="js-video">' +
+                                    '<iframe class="iframe-video" width=100% height="315" src="https://www.youtube.com/embed/'+vId+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                                '</section>' +
                                 '<p>'+descript+'</p>'+
                             
                             '</div>'+
@@ -108,19 +125,38 @@
                     }
 
                     var subVideos = document.getElementsByClassName("item");
+                    var playerVid = document.getElementsByClassName("details");
 
-                    var clickReply = function() {
+
+                    //Função que define a resposta ao click agora está 100%
+                    var clickReply = function(e) {
                         var vidId = this.getAttribute("data-key");
-                        mainVid(vidId);
+                        //mainVid(vidId);
+                        console.log(this);
+                        //console.log(e.target.parentElement);
+                        //console.log(this == e.target.parentElement)
+                        /*definição da função que faz o accordion(collapsable)*/
+                        if (this.lastChild.classList.value.includes('active')) { 
+                            removeClass(this.lastChild, "active");
+                            addClass(this.lastChild, "hidden");
+
+                        } else {
+                            removeClass(this.lastChild, "hidden");
+                            addClass(this.lastChild, "active");
+                        };
+                        for (var i = 0; i < subVideos.length; i++) { // garante q só a clicada por ultimo vai estar visivel
+                            if(subVideos[i] != this){
+                                removeClass(subVideos[i].lastChild, "active");
+                                addClass(subVideos[i].lastChild, "hidden");
+                            }
+                        }; 
                         //alert(vidId);
                     };
 
-                    for (var i = 0; i < subVideos.length; i++) {
-                        subVideos[i].addEventListener('click', clickReply, false);
+                    for (var i = 0; i < subVideos.length; i++) { // loop que adiciona o evento de click
+                        subVideos[i].addEventListener('click', clickReply);
                     }
-                     
-
-                     //console.log(novoSubVideo.innerHTML);
+                    
                  }
 
              </script>
