@@ -4,6 +4,7 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
 
 
 #menu-bar{
+    z-index: 10000;
     overflow: hidden;
     box-sizing: border-box;
     padding: 16px;

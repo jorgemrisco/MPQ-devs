@@ -276,6 +276,7 @@ h1{
 
 }
 
+
 #listOfMembers{
     padding: 32px;
 }
@@ -291,6 +292,12 @@ h1{
 }
 
 
+#enactus-container{
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+}
+
 
 /*Responsividade*/
 
@@ -301,6 +308,7 @@ h1{
         display: flex;
         flex-direction: column;
     }
+
 
     #oq-fazemos{
         flex-direction: column;
@@ -317,14 +325,17 @@ h1{
 
 /*half-screen-ish*/
 @media only screen and (max-width: 1100px) {
+    #enactus-container{
+        flex-direction: column;
+    }
+    
     #oq-fazemos{
         
         display: flex;
         flex-direction: column;
     }
-
     #quem-somos {
-        
+   
         display: flex;
         flex-direction: column;
     }
@@ -344,6 +355,7 @@ h1{
         text-size-adjust: auto;
         padding-top: 0px;
     }
+
     #quemSomosText{
         margin-right: 0px;
         margin-left: 0px;
