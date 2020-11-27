@@ -111,6 +111,28 @@ footer {
     font-family: 'Nunito', sans-serif;
 }
 
+.accessButton {
+    width: 200px;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 4px;
+    color: #ffffff;
+    height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #000000;
+    display: block;
+    border: none;
+}
+
+.accessButton:hover {
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: thin;
+    color: black;
+}
+
 #buttonContainer{
     justify-content: center;
 }
@@ -254,6 +276,14 @@ h1{
     padding-top: 0px;
 }
 
+.flexRowSubMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+}
 
 #quemSomosText{
     margin: 20px;
@@ -314,6 +344,10 @@ h1{
         flex-direction: column;
     }
 
+    .flexRowSubMain{
+        display: flex;
+        flex-direction: column;
+    }
 
     #oq-fazemos{
         flex-direction: column;
@@ -345,6 +379,11 @@ h1{
         flex-direction: column;
     }
 
+    .flexRowSubMain{
+        display: flex;
+        flex-direction: column;
+    }
+    
     .imageContainer {
         align-content: center;
         align-self: center;
