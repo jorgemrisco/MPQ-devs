@@ -293,6 +293,10 @@ h1{
     padding-top: 0px;
 }
 
+.align-left{
+    text-align: left;
+}
+
 #quemSomosText{
     margin: 20px;
     width: 100%;
@@ -319,6 +323,9 @@ h1{
 
 }
 
+#mpqrecomenda {
+    text-align: center;
+}
 
 #listOfMembers{
     padding: 32px;

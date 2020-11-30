@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expo Carcere Masculino</title>
+    <link rel="stylesheet" href="../css-styles/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css-styles/videos.css">
+    <script src="../components/navBar.js"></script>
 </head>
 <body>
+    <nav-bar></nav-bar>
     
+   <div class="container">
+       <header>
+            <h1 class="heading">Acervo da Exposição:</h1>
+       </header>
+       
+       <main id="main">
+        <main id="main">
+
+            <h1 class="heading">Egressos do Sistema Carcerário</h1>
+
+            <article class="item" id="i" >
+                <div class="titulo-thumb">
+                    <h3>Depoimento do Samuel  -  1:55</h3>
+                </div>
+                <div class="details hidden">
+                    <section class="js-video">
+                        <iframe class="iframe-video" width=100% height="320" src="https://www.youtube.com/embed/b8Je-MvF5vY?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </section>
+                    <p>description</p>
+                </div>
+            </article>
+
+
+       </main>
+   </div>
+   <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/museupraquem/"><img src='/assets/icons-social/facebook (1).svg' /></a>
+        <!-- 
+        <a href="http://www.twitter.com"><img src='/assets/icons-social/twitter (1).svg' /></a>
+        <a href="http://www.linkedin.com"><img src='/assets/icons-social/linkedin (1).svg' /></a> 
+        !-->
+        <a href="https://instagram.com/museupraquem?igshid=wa0gzfkea5sk"> <img src="/assets/icons-social/instagram.png" /> </a>
+    </div>
+    <p class="copy">&copy; Copyright 2020. Museu pra quem?</p>
+    </footer> 
+
+    <script>
+
+        function addClass(el, klass) {
+           el.classList.add(klass);
+        }
+
+        function removeClass(el, klass) {
+           el.classList.remove(klass);
+        }
+        
+        loadVideos();
+
+        async function loadVideos(){ /* comunicação com a API utilizando método await para o fetch*/
+               try{
+                   subVideosLoop();
+               } catch(error) {
+                   console.log("error", error);
+               }
+           
+           //}
+            
+        }
+
+        function subVideosLoop(){ //loop principal
+
+           var subVideos = document.getElementsByClassName("item");
+           var playerVid = document.getElementsByClassName("details");
+
+
+           //Função que define a resposta ao click agora está 100%
+           var clickReply = function(e) {
+               console.log(this);
+               /*definição da função que faz o accordion(collapsable)*/
+               console.log(this.childNodes[3]);
+               if (this.childNodes[3].classList.value.includes('active')) { 
+                   removeClass(this.childNodes[3], "active");
+                   addClass(this.childNodes[3], "hidden");
+
+               } else {
+                   removeClass(this.childNodes[3], "hidden");
+                   addClass(this.childNodes[3], "active");
+               };
+               for (var i = 0; i < subVideos.length; i++) { // garante q só a clicada por ultimo vai estar visivel
+                   if(subVideos[i] != this){
+                       removeClass(subVideos[i].childNodes[3], "active");
+                       addClass(subVideos[i].childNodes[3], "hidden");
+                   }
+               }; 
+           };
+
+           for (var i = 0; i < subVideos.length; i++) { // loop que adiciona o evento de click
+               subVideos[i].addEventListener('click', clickReply);
+           }
+           
+        }
+
+    </script>
+
+   <script src="../js/navBarDynamic.js"> </script>
 </body>
 </html>

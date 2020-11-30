@@ -45,6 +45,33 @@
        </header>
        
        <main id="main">
+
+            <article class="item" id="'+i+'" data-key='+vId+'>
+                <div class="titulo-thumb">
+                    <img src="'+ thumbnail +'" alt="" class="thumb">
+                    <h4>title</h4>
+                </div>
+                <div class="details hidden">
+                    <section class="js-video">
+                        <iframe class="iframe-video" width=100% height="315" src="https://www.youtube.com/embed/'+vId+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                    </section>
+                    <p>descript</p>
+                
+                </div>
+            </article>
+            <article class="item" id="'+i+'" data-key='+vId+'>
+                <div class="titulo-thumb">
+                    <img src="'+ thumbnail +'" alt="" class="thumb">
+                    <h4>title</h4>
+                </div>
+                <div class="details hidden">
+                    <section class="js-video">
+                        <iframe class="iframe-video" width=100% height="315" src="https://www.youtube.com/embed/'+vId+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                    </section>
+                    <p>descript</p>
+                
+                </div>
+            </article>
            
             <!--<div class="content">--><!--Video padrão antes de processar a API-->
                 <!--<section id="videoMain"> 
@@ -80,10 +107,10 @@
 
                  async function loadVideos(){ /* comunicação com a API utilizando método await para o fetch*/
                      try{
-                         let response = await fetch(urlTeste);
-                         let dataJSON = await response.json();
+                         //let response = await fetch(urlTeste);
+                         //let dataJSON = await response.json();
                          //console.log(dataJSON);
-                         var id = dataJSON.items[3].snippet.resourceId.videoId;
+                         //var id = dataJSON.items[3].snippet.resourceId.videoId;
                          //mainVid(id);
                          subVideosLoop(dataJSON);
                      } catch(error) {
@@ -99,7 +126,7 @@
 
                  function subVideosLoop(dataJSON){ //loop principal
 
-                    var i;
+                   /*  var i;
                     for (i=0; i < dataJSON.items.length; i++){
                         var thumbnail = dataJSON.items[i].snippet.thumbnails.medium.url;
                         var title = dataJSON.items[i].snippet.title;
@@ -122,7 +149,7 @@
                             '</div>'+
                         '</article>');
 
-                    }
+                    } */
 
                     var subVideos = document.getElementsByClassName("item");
                     var playerVid = document.getElementsByClassName("details");
@@ -130,7 +157,7 @@
 
                     //Função que define a resposta ao click agora está 100%
                     var clickReply = function(e) {
-                        var vidId = this.getAttribute("data-key");
+                        //var vidId = this.getAttribute("data-key");
                         //mainVid(vidId);
                         console.log(this);
                         //console.log(e.target.parentElement);

@@ -5,6 +5,10 @@ h1{
     color: black;
 }
 
+h3{
+    text-align: left;
+}
+
 h4{
     padding: 0;
     margin: 0;
