@@ -26,7 +26,7 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
     right: auto;
     display: flex;
     justify-content: space-around;
-    align-self: center;    
+    align-self: center;
 
 }
 
@@ -62,20 +62,34 @@ Para importar pra outra página CSS só usar @import nav-menu.css */
         flex-direction: column;
     }
 
+    #menu-links{
+        display: grid;
+        justify-content: center;
+        align-self: center;
+    
+    }
+}
+
+@media only screen and (max-width: 740px) {
+
     .nav-button{
         font-size:12px;
     }
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: auto  ;
-  }
-  
+@media only screen and (min-width: 600px) {
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        overflow: auto  ;
+      }
+      
+    
+      .sticky + .content {
+        padding-top: 60px;
+      }
+      
 
-  .sticky + .content {
-    padding-top: 60px;
-  }
-  
+}
+
