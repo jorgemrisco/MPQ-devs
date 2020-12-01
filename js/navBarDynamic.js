@@ -12,6 +12,7 @@ var sticky = navbar.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset > sticky) {
+    document.body.style.margin = "100px 0px";
     navbar.classList.add("sticky");
     navbar.style.background="black";
     logo.src = "../assets/images/logo/MPQ-logo-white.png";
@@ -21,6 +22,7 @@ function myFunction() {
 
 
   } else {
+    document.body.style.margin = "0px 0px";
     navbar.classList.remove("sticky");
     navbar.style.background="white";
     logo.src = "../assets/images/logo/MPQ-logo-black.png";
