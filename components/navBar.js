@@ -5,7 +5,7 @@ customElements.define('nav-bar', class extends HTMLElement {
       <div id="responsive-div">
           <div id="menu-logo">
               <a href="index.html">
-                  <img id="logo-reference" src="../assets/images/logo/MPQ-logo-black.png" alt="MPQ-logo-black" height="60px">
+                  <img id="logo-reference" src="assets/images/logo/MPQ-logo-black.png" alt="MPQ-logo-black" height="60px">
               </a>
   </div>
   
