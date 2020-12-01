@@ -51,7 +51,4 @@ function subVideosLoop(){ //loop principal
     }
             
 }
-/*    }
-}); */
-        
  
