@@ -1,0 +1,21 @@
+html {
+    background-color: #4a1112;
+    color: white;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    display: block;
+    color: white;
+    
+}
+
+article {
+    background-color: white ;
+    color: black;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
