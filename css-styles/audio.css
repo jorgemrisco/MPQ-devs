@@ -1,6 +1,18 @@
 html {
     background-color: black;
-    color: white;
     text-align: center;
     font-family: 'Nunito', sans-serif;
+}
+
+article {
+    margin: 20px;
+    background-color: #F8F9FA;
+    color: black;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 50px;
+}
+
+h1 {
+    padding-top: 30px;
 }
