@@ -116,6 +116,7 @@ footer {
 }
 
 .accessButton {
+    text-align: center;
     width: 200px;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
