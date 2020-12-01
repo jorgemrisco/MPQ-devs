@@ -15,7 +15,7 @@ function myFunction() {
     document.body.style.margin = "100px 0px";
     navbar.classList.add("sticky");
     navbar.style.background="black";
-    logo.src = "../assets/images/logo/MPQ-logo-white.png";
+    logo.src = "assets/images/logo/MPQ-logo-white.png";
     for(var i=0; i<text.length; i++) { 
         text[i].style.color="white";
       }
@@ -25,7 +25,7 @@ function myFunction() {
     document.body.style.margin = "0px 0px";
     navbar.classList.remove("sticky");
     navbar.style.background="white";
-    logo.src = "../assets/images/logo/MPQ-logo-black.png";
+    logo.src = "assets/images/logo/MPQ-logo-black.png";
     for(var i=0; i<text.length; i++) { 
         text[i].style.color="black";
       }
