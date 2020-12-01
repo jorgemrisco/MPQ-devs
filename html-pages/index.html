@@ -20,6 +20,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css-styles/styles-bootstrap.css" rel="stylesheet" />
         <script src="../components/navBar.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 <body>
@@ -152,43 +155,194 @@
         </div>
     </section>
 
-    <section class="members" id="nossaEquipeTopo">
-        <div class="container-team">
-            <h1 class="heading">Nossa equipe</h1>
-            <div class="flex-row" id="listOfMembers">
-                <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img"  width="150px">
-
-                    <h3 class="user-name">Fulano de tal</h3>
-                    <h5>Diretor do projeto</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam quam ipsa perferendis vitae
-                        sunt inventore labore sapiente corrupti. Sed odio earum hic doloribus. Obcaecati maxime quas non
-                        repellendus nisi?</p>
-                </div>
-                <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img" width="150px">
-                    
-                    <h3 class="user-name">Fulano de tal</h3>
-                    <h5>Diretor do projeto</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam quam ipsa perferendis vitae
-                        sunt inventore labore sapiente corrupti. Sed odio earum hic doloribus. Obcaecati maxime quas non
-                        repellendus nisi?</p>
-                </div>
-                <div class="flex-column" id="memberCard">
-                    <img src="../assets/images/generic.jpg" class="profile-img" width="150px">
-                    
-                    <h3 class="user-name">Fulano de tal</h3>
-                    <h5>Diretor do projeto</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam quam ipsa perferendis vitae
-                        sunt inventore labore sapiente corrupti. Sed odio earum hic doloribus. Obcaecati maxime quas non
-                        repellendus nisi?</p>
+    <section class="equipe">
+        <h1 class="heading">Nossa equipe</h1>
+        <div class="slider owl-carousel">
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Samyra.jpg" alt="Samyra"></div>
+                <div class="content">
+                    <div class="title">
+                        Samyra</div>
+                    <div class="sub-title">
+                        Estudante de Arquitetura e Urbanismo na FAU USP</div>
+                    <p>
+                        Meu principal hobby é passar tempo com a minha família e meu cachorro e viajar, conhecer pessoas e
+                        outras culturas. O que mais me encanta no projeto Museu Pra Quem? é justamente o contato com uma
+                        pluralidade diversa de pessoas e suas histórias únicas, que ao mesmo tempo consegue nos emocionar e
+                        nos transformar.</p>
                 </div>
             </div>
-
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Vinícius.jpg" alt="Vinícius"></div>
+                <div class="content">
+                    <div class="title">
+                        Vinícius Esteves</div>
+                    <div class="sub-title">
+                        Estudante de Relações Internacionais no IRI-USP.</div>
+                    <p>
+                        Sou amante das artes, principalmente do teatro. Me interesso por política e questões sociais. O que
+                        mais me encanta no projeto Museu Para Quem? é o que ele possibilita, não só para quem conta sua
+                        história, mas também para quem escuta. Mesmo distantes um do outro, o projeto conseguir unir esses
+                        indivíduos pela empatia. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Clara Buonicore.jpg" alt="Clara"></div>
+                <div class="content">
+                    <div class="title">
+                        Clara Buonicore</div>
+                    <div class="sub-title">
+                        Estudante de Psicologia no IP-USP.</div>
+                    <p>
+                        Minhas principais paixões são a literatura, o cinema e a busca pelo conhecimento principalmente na
+                        área da psicologia. O que me encanta no Museu pra Quem? A possibilidade de treinar nossa escuta
+                        ativa frente à grupos sociais que muitas vezes não têm voz na nossa sociedade, o aprendizado sobre
+                        as diferentes realidades que coexistem nos nossos espaços e na nossa sociedade e o espaço que essa
+                        vivência traz para a construção de pontes, de transformação social e de conhecimento sobre a
+                        realidade brasileira. </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - André.jpeg" alt="André"></div>
+                <div class="content">
+                    <div class="title">
+                        André</div>
+                    <div class="sub-title">
+                        Estudante de Engenharia de Materiais na EP-USP. </div>
+                    <p>
+                        Meus principais hobbys são a fotografia e aprender sobre o universo. O que mais me encanta no Museu
+                        Pra Quem? é seu papel de trazer a tona realidades que estão fora da bolha social da maioria das
+                        pessoas, ampliando assim a visão das pessoas sobre o mundo ao seu redor e as diferente realidades
+                        que cada um vive.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto- Clara Santos.jpg" alt="Clara"></div>
+                <div class="content">
+                    <div class="title">
+                        Clara Santos</div>
+                    <div class="sub-title">
+                        Estudante de Letras - Português/Espanhol na FFLCH-USP.</div>
+                    <p>
+                        Eu amo conhecer novas pessoas e culturas e aprender sobre elas! O Museu Pra Quem? Ser esse espaço de
+                        importatíssimo e super sensível de diálogo, escuta e co-criação com pessoas incríveis é o que me faz
+                        ter brilho nos olhos!
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="" alt="Isadora"></div>
+                <div class="content">
+                    <div class="title">
+                        Isadora Barro Novo</div>
+                    <div class="sub-title">
+                        Estudante de Arquitetura e Urbanismo da FAUUSP.</div>
+                    <p>
+                        Adoro estar em contato com a natureza, estudar culturas diferentes e ficar com a minha família e
+                        amigos. Sobre o Museu Pra Quem? Ah, esse projeto me deixa com brilho nos olhos por enxergar a
+                        possibilidade de levar mais empatia e respeito ao mundo. Escutar, para além de ouvir, faz a
+                        diferença!
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Raquel.jpg" alt="Raquel"></div>
+                <div class="content">
+                    <div class="title">
+                        Raquel Barbosa</div>
+                    <div class="sub-title">
+                        Estudante de História na FFLCH - USP.</div>
+                    <p>
+                        Como uma boa interiorana em São Paulo-SP, meu hobby é ficar decorando o número das linhas de ônibus
+                        para nunca me perder.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Bruna Tsarbopoulos.jpeg" alt="Bruna"></div>
+                <div class="content">
+                    <div class="title">
+                        Bruna Tsarbopoulos</div>
+                    <div class="sub-title">
+                        Estudante do curso de bacharelado e licenciatura em História, pela FFLCH - USP</div>
+                    <p>
+                        Sou completamente apaixonada por educação e empreendedorismo social. O Museu Pra Quem? foi o lugar
+                        onde compreendi um outro tipo de historiografia, que toma vida e forma em outras partes da
+                        sociedade. No Museu, vi a história se apresentar em forma de uma dura e bonita poesia, que conta a
+                        trajetória de outros tantos indivíduos que são ofuscados em nosso cotidiano. No Museu, pude ouvir
+                        outras vozes e sons, que compõem nossa identidade.
+    
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="#" alt=""></div>
+                <div class="content">
+                    <div class="title">
+                        João Marcos Duque</div>
+                    <div class="sub-title">
+                        Estudante de Engenharia Química pela Escola Politécnica - USP.</div>
+                    <p>
+                        Tenho grande interesse em filosofia, literatura, sociologia, e em questões humanas e existenciais no
+                        geral, além de acreditar firmemente no poder da escuta e no valor inestimável da vida de cada
+                        indivíduo. Esses interesses formam o fio que me conecta ao projeto Museu Pra Quem? e sua proposta
+                        sensível e humana.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Matheus Miranda.jpeg" alt="Matheus"></div>
+                <div class="content">
+                    <div class="title">
+                        Matheus Miranda</div>
+                    <div class="sub-title">
+                        Estudante de Relações Internacionais na USP.</div>
+                    <p>
+                        Sou apaixonado por música e acredito na arte e na cultura como meios de transformação social e de
+                        quebra de preconceitos. No Museu, aprendi que todo mundo tem algo interessante a contar e,
+                        principalmente, que escutar é a melhor forma de aprender.
+    
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="/assets/images/equipe/Foto - Matheus Lima.jpg" alt="Matheus"></div>
+                <div class="content">
+                    <div class="title">
+                        Matheus Lima</div>
+                    <div class="sub-title">
+                        Estudante de Psicologia no IP - USP.</div>
+                    <p>
+                        Sou apaixonado pelo potencial de transformação social, e participo de projetos e iniciativas desta
+                        área, com uma busca pelo desenvolvimento integral do público-alvo. Minha adesão ao Museu pra Quem? é
+                        motivada pelo enfoque na empatia e na quebra de paradigmas que o projeto proporciona, com a
+                        construção de pontes entre histórias geralmente invisibilizadas e bolhas que geralmente não teriam
+                        acesso a essas realidades.
+                    </p>
+                </div>
+            </div>
         </div>
+        <script>
+            $(".slider").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000, //2000ms = 2s;
+                autoplayHoverPause: true,
+            });
+        </script>
 
-        
-    </section>
     <section class="contact" id="faleConosco">
             <h1>Dúvidas, sugestões ou parceria? <br> Fale conosco.</h1>
             <div class="flex-column">
