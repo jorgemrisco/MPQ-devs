@@ -1,4 +1,6 @@
 @import "nav-menu.css";
+@import "footer.css";
+@import "videos.css";
 
 
 *{
@@ -19,40 +21,6 @@ body {
     background-color: white;
 }
 
-.social-icons {
-    margin-top: 30px;
-}  
-
-.social-icons  {
-    display:inline-block;
-    list-style-type:none;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-}
-
-.social-icons  {
-    border-bottom: none;
-}
-
-  .social-icons img {
-    width:40px;
-    height:40px;
-    align-self: center;
-    align-content: center;
-}
-
-footer {
-    font-family: 'Nunito', 'Sans Serif';
-    font-size: 14px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    padding-bottom: 50px;
-    background-color: white;
-    color: black;
-    text-align: center;
-}
 
 .contact{
     display: flex;
@@ -224,8 +192,14 @@ h1{
 }
 
 .copy {
+    padding: 20px;
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
+
+}
+
+.footer-image {
+    padding: 16px;
 }
 
 
