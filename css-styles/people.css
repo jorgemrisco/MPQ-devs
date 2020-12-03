@@ -1,24 +1,32 @@
 body {
     background-color: #4a1112;
-    color: white;
     text-align: center;
     font-family: 'Nunito', sans-serif;
     margin: 50px;
     padding: 10px;
 }
 
-header {
+h1 {
     display: block;
     color: white;
     font-size: 70%;
 }
-
+.article-videos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: black;
+}
 article {
     background-color: white ;
     color: black;
     padding: 16px;
     border-radius: 10px;
     text-align: justify;
+    padding: 20px;
 }
 
 .imagem-pagina{
