@@ -1,13 +1,16 @@
-html {
+body {
     background-color: #4a1112;
     color: white;
     text-align: center;
     font-family: 'Nunito', sans-serif;
+    margin: 50px;
+    padding: 10px;
 }
 
 header {
     display: block;
     color: white;
+    font-size: 70%;
 }
 
 article {
@@ -19,7 +22,29 @@ article {
 }
 
 .imagem-pagina{
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
+}
+button {
+    text-align: center;
+    width: 150px;
+    font-size: 80%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #4a1112;
+    padding: 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    background: white;
+    display: block;
+    border: none;
 }
 
+button:hover {
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: thin;
+    color: black;
+}
