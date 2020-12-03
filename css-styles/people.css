@@ -2,16 +2,24 @@ body {
     background-color: #4a1112;
     text-align: center;
     font-family: 'Nunito', sans-serif;
-    margin: 50px;
+    margin: 20 px;
     padding: 10px;
 }
 
 h1 {
     display: block;
     color: white;
-    font-size: 70%;
+    font-size: 40 px;
+    padding:0;
+    margin-bottom: 0;
 }
-.article-videos{
+h2{
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+}
+
+main{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,7 +35,9 @@ article {
     border-radius: 10px;
     text-align: justify;
     padding: 20px;
+    font-size: 16 px;
 }
+
 
 .imagem-pagina{
     width: 20%;
@@ -36,7 +46,7 @@ article {
 button {
     text-align: center;
     width: 150px;
-    font-size: 80%;
+    font-size: 16px;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     border-radius: 4px;
