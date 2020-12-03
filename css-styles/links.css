@@ -1,0 +1,36 @@
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #434343;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #4a1112;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
