@@ -50,11 +50,11 @@ button {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     border-radius: 4px;
-    color: #4a1112;
+    background-color: #434343;
+    color: white;
     padding: 10px;
     margin: 20px 0px;
     cursor: pointer;
-    background: white;
     display: block;
     border: none;
 }
