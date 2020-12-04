@@ -1,5 +1,6 @@
-document.getElementById("button").onclick = function() { 
-  
-    document.getElementById("article").style.display = "block"; 
 
+document.getElementById("transcricao").style.display = "none"
+
+function myFunction() {
+    document.getElementById("transcricao").style.display = "block"
 }
