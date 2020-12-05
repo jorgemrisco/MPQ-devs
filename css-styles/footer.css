@@ -6,15 +6,22 @@
     list-style-type:none;
     -webkit-user-select:none;
     -moz-user-select:none;
-}
-
-.social-icons  {
     border-bottom: none;
 }
+/*Reseta bootstrap da página index*/
+.social-icons  *,
+.social-icons  *:before,
+.social-icons  *:after {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+
 
   .social-icons img {
-    width:64px;
-    height:64px;
+    width:32px;
+    height:32px;
     align-self: center;
     align-content: center;
 }
