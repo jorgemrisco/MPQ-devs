@@ -65,4 +65,31 @@ button:hover {
     border-color: black;
     border-width: thin;
     color: black;
+    border: none;
+}
+
+.returnArrow {
+    cursor: pointer;
+    padding: 16px;
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-color: #434343;
+    border-radius: 4px;
+}
+.returnArrow:hover {
+    background-color: white;
+    border: solid;
+    border-color: black;
+    border-width: thin;
+    color: black;
+}
+
+.returnArrow:hover .arrowSize{
+    color: black;
+}
+
+.arrowSize {
+    font-size: 32px;
+    color: white; 
 }
