@@ -1,5 +1,5 @@
 /* unvisited link */
-a:link {
+.linkCustomized:link {
     color: black;
     text-decoration: none;
     display: flex;
@@ -9,7 +9,7 @@ a:link {
   }
   
   /* visited link */
-  a:visited {
+  .linkCustomized:visited {
     color: #434343;
     text-decoration: none;
     display: flex;
@@ -18,7 +18,7 @@ a:link {
   }
   
   /* mouse over link */
-  a:hover {
+  .linkCustomized:hover {
     color: black;
     text-decoration: none;
     display: flex;
@@ -27,7 +27,7 @@ a:link {
   }
   
   /* selected link */
-  a:active {
+  .linkCustomized:active {
     color: #4a1112;
     text-decoration: none;
     display: flex;
