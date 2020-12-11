@@ -1,13 +1,17 @@
 .row-expo {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
+
+    
   }
   
   /* Create four equal columns that sits next to each other */
   .column-expo {
-    flex: 25%;
-    max-width: 25%;
+    padding: 2px;
+    flex:33%;
+    max-width: 33%;
    
   }
   
