@@ -151,6 +151,7 @@ h1{
 .heading {
     font-family: 'Nunito', sans-serif;
     color: black;
+    font-weight: bold;
     padding: 40px 0px;
 }
 
