@@ -93,3 +93,9 @@ button:hover {
     font-size: 32px;
     color: white; 
 }
+
+#transcricao{
+    width: 80%;
+    text-align: justify;
+    white-space: pre-line;
+}
