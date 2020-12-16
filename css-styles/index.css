@@ -355,6 +355,7 @@ h1{
       flex: 1;
       margin: 0 10px;
       background: #fff;
+      min-height: 508px; /*tamanho da maior para padronizar*/
     }
     
     .slider .card .img{
@@ -388,6 +389,31 @@ h1{
       text-align: justify;
       margin: 10px 0;
     }
+
+    .card .content .hideContent {
+        overflow: hidden;
+        line-height: 1em;
+        height: 2em;
+    }
+    .card .content .showContent {
+        line-height: 1em;
+        height: auto;
+    }
+    .card .content .showContent{
+        height: auto;
+    }
+    .card .content .showMore{
+        padding: 4px;
+        text-align: center;
+        border-radius: 4px;
+        color: #b8b6b6;
+        cursor: pointer;
+        background: #f2f2f2;
+        display: block;
+        border: none;
+    }
+    
+    
   /*Fim do Slider  
 
 /*Responsividade*/
