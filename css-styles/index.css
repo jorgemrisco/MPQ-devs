@@ -329,6 +329,10 @@ h1{
     display: flex;
     flex-direction: row;
 }
+.enactus-photo-class{
+    width: 500px;
+    height: auto;
+}
 
 #nossaEquipeTopo{
     align-items: center;
@@ -421,6 +425,9 @@ h1{
 
 /*Mobile*/
 @media only screen and (max-width: 600px) {
+    .enactus-photo-class{
+        width: 100%;
+    }
     #quem-somos {
         display: flex;
         flex-direction: column;
